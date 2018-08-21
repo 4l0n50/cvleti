@@ -1,0 +1,17 @@
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.brf
+*.pdf
+*.swp
+*.old
+*.bcf
+*.xml
+*.zip
+*.bak
+*.4ht
+*.gz
+.DS_Store
+*.synctex(busy)

@@ -1,0 +1,183 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{multicol}
+
+\usepackage{fullpage}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge \textsc{Paoletti}  Letizia -- Educatrice
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+%\section{Personal Data}
+\begin{small}\begin{center}
+\begin{tabular}{rl}
+%    \textsc{Place and Date of Birth:} & Someplace, Italy  | dd Month 1912 \\
+    \textsc{Addresse:}   &68 rue Tronchet 69006 – Lyon \\
+    \textsc{Téléphone:}     & 0624939996\\
+    \textsc{email:}     & \href{mailto:paoletti.letizia@gmail.com}{paoletti.letizia@gmail.com}
+\end{tabular}\end{center}\end{small}
+%Section: Work Experience at the top
+\section{Expériences Professionnelles}
+\begin{tabular}{r|p{13cm}}
+ \emph{Depuis 2013} & Éducatrice, Cooperative Sociale Tuttinsieme à Milan, Italie.\\
+ &\footnotesize{
+ 	\begin{itemize}
+ 	
+ 	\item Educatrice specialisée dans plusieurs services d'aide aux familles en difficulté
+ 		\begin{itemize}
+ %			\item Mise en place d'activités educatives addressées aux familles accueillies dans deux different
+%centres d'hébergement.
+			\item Référent du projet educatif pour plusieurs familles accueillies en centre d'hébergement pour mère-enfant.
+			\item Gestion de la vie de groupe dans l'hébergement.
+			\item Référent du projet educatif pour enfants suivi à domicile, dont certains en situation d' handicap
+			\item Soutien à la relation parents/enfants, 
+			\item Accompagnement des familles dans leur processus d'inclusion sociale et le rapport avec les institutions.
+			\item Collaboration avec l’équipe pluri-professionnelle qui suive les familles/les mineurs.
+			\item Animation d'ateliers creatifs pour les enfants
+			
+ 		\end{itemize}
+ 	\item Animatrice d’ateliers socio-éducatifs en contexte scolaire avec enfants 6/15 ans, projets
+d'insertion sociale et prévention de l'abandon scolaire.
+	\begin{itemize}
+		\item Organisation et mise en place d’ateliers éducatifs.
+		\item Gestion d'activités en groupe.
+		\item Collaboration avec l’équipe d'enseignants.
+		\item Elaboration du Bilan du projet
+	\end{itemize}
+	\item Educatrice EJE dans d'un service multiacceuil 0-3 ans (creche).
+	\begin{itemize}
+		\item Mise en place d'activités éducatives pour enfants 0/3 ans auprès d'un service multiacceuil
+(creche).
+		\item Référent educative pour un groupe de 8 enfants.
+		\item Travail en equipe.
+		\item Gestion de la relation avec les familles
+		\item Animation d'ateliers artistiques
+	\end{itemize}
+ 	\end{itemize}
+ } \\
+ 
+ \multicolumn{2}{c}{} \\
+ \textsc{De 2013 a 2015} & Educatrice specialisée, contractee par deux familles.\\&
+ \footnotesize{
+ Soutien scolaire 
+ soutien à la relation parents/ado
+ acompagnement des familles dans la relation avec l'ecole
+% \begin{itemize}
+% 	\item Accompagnement individuel à domicile aux enfants en difficultés.
+% 	\item Travail en equipe avec les professionels et les enseignants qui aident la famille/mineur.
+% 	\item Soutien à la relation parent-enfant
+% \end{itemize}
+ }\\\multicolumn{2}{c}{} \\
+\textsc{Decembre 2012} & Responsable d'un groupe de bénévols, auprès de l'ONG Coopi-Cooperazione
+Internazionale de Milan\\&
+\footnotesize{
+%\begin{itemize}
+%	\item Relation avec et coordination des bénévols.
+%	\item Mise en place d'activités de fundrasing et de sensibilisation.
+%\end{itemize}
+}
+\end{tabular}
+
+%Section: Education
+\section{Formation}
+\begin{tabular}{rp{14,5cm}}	
+ 2014 & Maitrise en ``Politiques et Services Sociaux'' à l'Università di Torino, Italie (Bac + 5)\\
+%& 110/110 \small\emph{summa cum laude} | Major: Quantitative Finance\\
+%& Thesis: ``Sublinear and Locally Sublinear Prices'' | \small Advisor: Prof. Erio \textsc{Castagnoli}\\
+%&\normalsize \textsc{Gpa}: 28.61/30\hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams}\\&\\
+2012& Bourse d'études pour activité de recherche sociale dans un projet de coopération internationale au Bresil (Recife), ``Violence de Genre et Politques pour la Combattre'' \\
+%&110/110 \small\emph{summa cum laude}, \normalsize\textbf{Bocconi University}, Milan\\
+%& Thesis: ``Portfolio Strategies with Target Prices'' | \small Advisor: Stefano \textsc{Bonini}\\
+%&\normalsize \textsc{Gpa}: 29.85/30\hyperlink{grds_cleli}{\hfill| \footnotesize Detailed List of Exams}\\&\\
+2009 & Licence en Sciences de l'Education --- filière Educatrice Interculturelle à l'Università degli Studi di Milano Bicocca, Italie (BAC+3)\\
+%&\textsc{Gpa}: 3.875/4 \hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}\\&\\
+2008 & Bourse d'etudes Erasmus à Groningen, Pays Bas\\
+\multicolumn{2}{p{14cm}}{\footnotesize{Seminaires sur ``Droits d'Asile et Migrations'', ``Violence de Genre'', ``Droits des Enfants et Adoption Internationale'', ``Theatre Social''.}}
+\end{tabular}
+
+%Section: Languages
+\section{Langues}
+\begin{tabular}{rl}
+ \textsc{Italien}&Langue maternelle.\\
+ \textsc{Français}& Courant (Delf I Dégré-livello B1).\\
+\textsc{Anglais}&Courant (livello B1).\\
+\textsc{Portugais}&Courant (Celpe-Bras 2011).\\
+\textsc{Spagnol} & Courant (Niveu certifie par Alonso González).
+\end{tabular}
+
+\section{Centres d'intérêt}
+Recherche et benevolat dans des projets sociaux et de coopération internationale en Italie et à  l'etrangere, concernant droit d'asile e refugies, violence de gendre, droits des enfants.
+%\begin{tabular}{rl}
+% Basic Knowledge:& \textsc{php}, my\textsc{sql}, \textsc{html}, Access, \textsc{Linux}, ubuntu, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+%Intermediate Knowledge:& \textsc{vba}, Excel, Word, PowerPoint\\
+%\end{tabular}
+
+\end{document}
